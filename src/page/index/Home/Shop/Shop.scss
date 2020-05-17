@@ -1,0 +1,93 @@
+.shop{
+    // display: flex;
+    margin-top:px2rem(5);
+    margin-bottom:px2rem(60);
+    .item{
+        display: flex;
+        margin:px2rem(10) px2rem(5);
+        .icon{
+            width: px2rem(76);
+            height: px2rem(57);
+            margin-right: px2rem(10);;
+            img{
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: contain; 
+            }
+        }
+        .content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .name{
+                font-size: px2rem(16);
+                font-weight: bolder;
+            }
+            .shop-detail{
+                display: flex;
+                justify-content: space-between;
+                .shop-data{
+                    display: flex;
+                    font-size: px2rem(13);
+                    align-items: center;
+                    .comment-star{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: px2rem(5);;
+                        .star{
+                            width: px2rem(12);
+                            height: px2rem(12);
+                            background: url("./image/star.png") no-repeat ;
+                            background-position: 0 px2rem(-24);
+                            background-size: px2rem(12) px2rem(36);
+                            &.full{
+                                background-position: 0 0;
+                            }
+                            &.half{
+                                background-position: 0 px2rem(-12);;
+                            }
+                            .zero{
+                                background-position: 0 px2rem(-24); 
+                            }
+                        }
+                    }
+                    .score{
+                        margin: 0 px2rem(5);
+                    }
+                }
+                .shop-distance{
+                   display:flex;
+                   .time{
+                       &:after{
+                           display: inline-block;
+                           content:'';
+                           width:1px;
+                           height:px2rem(10);
+                           margin:0 px2rem(5);
+                           background-color: #000;
+                       }
+                   }
+                }
+            }
+
+            .deliver-detail{
+                display:flex;
+                font-size: px2rem(12);
+                align-items: center;
+                .price{
+                    display: flex;
+                    align-items: center;
+                    &:after{
+                        display: inline-block;
+                        content:'';
+                        width:1px;
+                        height:px2rem(5);
+                        margin: 0 px2rem(5);
+                        background-color:#000;
+                    }
+                }
+            }
+        }
+    }
+}

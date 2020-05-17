@@ -3,12 +3,11 @@ html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input,
     margin: 0;
     padding: 0;
 }
-div｛
-display："felx"
-｝
+
+
 *{box-sizing: border-box;}
 html, body {
-    min-height: 100%;2018-11-03
+    min-height: 100%;
 }
 
 body {
@@ -39,6 +38,7 @@ table {
 input, textarea {
     outline: none;
     border: none;
+    
 }
 
 textarea {
@@ -89,4 +89,11 @@ textarea {
     display: inline-block;
     *display: inline;
     *zoom: 1;
+}
+
+
+.one-line{
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;  
 }

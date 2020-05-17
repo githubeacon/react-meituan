@@ -2,6 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Header from './Header/Header.jsx';
+import Category from './Category/Category.jsx';
+import Business from './Business/Business.jsx';
+import SortBar from './SortBar/SortBar.jsx';
+import Shop from './Shop/Shop.jsx';
 /**
  * 主页
  */
@@ -15,6 +19,10 @@ class Home extends React.Component{
         return(
             <div>
                 <Header />
+                <Category />
+                <Business />
+                <SortBar />
+                <Shop />
             </div>
         )
     }

@@ -13,7 +13,12 @@ class Header extends React.Component{
     render(){
         return (
             <div className="header">
-                <img  />
+                    <div className="address">
+                        <div className="address-name one-line" >鸿运公寓鸿运公寓鸿运公寓鸿运公寓鸿运公寓鸿运公寓</div>
+                    </div>
+                    <div className="search">
+                        <input type="text" className="one-line"  placeholder="请输入商家或者商品名称" />
+                    </div>
             </div>
         );
     }

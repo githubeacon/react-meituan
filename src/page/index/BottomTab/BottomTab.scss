@@ -3,20 +3,20 @@
     position: fixed;
     bottom:0;
     width:100%;
-    height:px2rem(50px);
+    height:px2rem(50);
     background-color: #F3F3F3;
     display:flex;
     .tab-item{
         display: flex;
         flex:1;
-        font-size:px2rem(12px);
+        font-size:px2rem(12);
         color: #9C9C9C;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         .item-icon{
-            width: px2rem(32px);
-            height:px2rem(32px);
+            width: px2rem(32);
+            height:px2rem(32);
             background-size: cover;
         }
         &.active {
@@ -25,36 +25,42 @@
         &.home{
             .item-icon{
                 background: url(./image/home.png) no-repeat;
+                background-size: cover;
             }
         }
 
         &.order{
             .item-icon{
-                background: url(./image/order.png) no-repeat;
+                background: url(./image/order.png) ;
+                background-size: cover;
             }
         }
         
         &.my{
             .item-icon{
                 background: url(./image/my.png) no-repeat;
+                background-size: cover;
             }
         }
 
         &.home.active{
             .item-icon{
-                background: url(./image/home_active.png) no-repeat;
+                background: url(./image/home_active.png) ;
+                background-size: cover;
             }
         }
 
         &.order.active{
             .item-icon{
-                background: url(./image/order_active.png) no-repeat;
+                background: url(./image/order_active.png) ;
+                background-size: cover;
             }
         }
         
         &.my.active{
             .item-icon{
-                background: url(./image/my_active.png) no-repeat;
+                background: url(./image/my_active.png) ;
+                background-size: cover;
             }
         }
         

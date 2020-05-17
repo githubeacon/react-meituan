@@ -6,7 +6,8 @@
         "document":true,
         "module":true,
         "require":true,
-        "store":true
+        "store":true,
+        "console":true,
     },
     "rules":{
         "react/prop-types":"off"

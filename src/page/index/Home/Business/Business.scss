@@ -1,0 +1,16 @@
+.business{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .name{
+        font-size:px2rem(16);
+        margin:0 px2rem(5);;
+    }
+    &:before,&:after{
+        content: '';
+        display: inline-block;
+        width: px2rem(50);
+        height:px2rem(1);
+        background-color: #b3b3b3;
+    }
+}

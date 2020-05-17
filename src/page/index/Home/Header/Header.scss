@@ -1,7 +1,74 @@
 .header{
-    position: relative;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #1d1b21;
+    width:100%;
+    height:px2rem(50);
+    padding:0 px2rem(10);
+    align-items: center;
+    font-size: px2rem(16);
+        .address{
+            max-width: px2rem(200);
+            line-height: px2rem(30);
+            align-items: center;
+            display:flex;
+            .address-name{
+                font-size: px2rem(16);
+                color: #ececed;
+                max-width: px2rem(100);
+                text-align: center;
+            }
+            &:before{
+                content:'';
+                width:px2rem(15);;
+                height:px2rem(15);;
+                background:url(./image/location.png) no-repeat;
+                background-size: contain;
+                display: inline-block;
+                margin-right: px2rem(5);;
+                flex-shrink: 0;
+            }
+            &:after{
+                content: '';
+                width:px2rem(6);;
+                height:px2rem(6);;
+                border-right: 1px solid #fff;
+                border-top:1px solid #fff;
+                display: inline-block;
+                transform: rotate(45deg);
+                margin-left:px2rem(2);;
+                margin-right:px2rem(20);;
+                flex-shrink: 0;
+            }
+            
+        }
+        .search{
+            display:flex;
+            flex: 1;
+            height:px2rem(30);;
+            color: #ebebe4;
+            border: 1px solid #ebebe4;
+            background:#ebebe4;
+            padding:px2rem(5) px2rem(10);;
+            border-radius: px2rem(30);;
+            align-items: center;
+            input{
+                background:#ebebe4;
+                width: 100%;
+            }
+            &:before{
+                content: '';
+                width:px2rem(16);;
+                height:px2rem(16);;
+                background:url("./image/search.png") no-repeat;
+                background-size: contain;
+                margin-right: px2rem(5);;
+                flex-shrink: 0;
+            }
+        }
+    
 }
-.header img{
-    height:auto;
-   background: url('./image/banner.png') no-repeat;
-}
+
+
+

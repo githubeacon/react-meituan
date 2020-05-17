@@ -1,0 +1,23 @@
+.category{
+    margin-top:px2rem(50);
+    padding:px2rem(5) px2rem(10);;
+    .list{
+         display: flex;
+         flex-wrap: wrap;
+        li{
+            width:20%;
+            .item{
+                text-align: center;
+                margin:px2rem(5) px2rem(5);;
+                .item-img{
+                    width: px2rem(60);
+                    height:px2rem(60);;
+                    margin-bottom:px2rem(5);
+                }
+                .item-name{
+                    font-size:px2rem(14);
+                }
+            }
+        }   
+    }
+}
