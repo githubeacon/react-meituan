@@ -10,20 +10,73 @@ class Shop extends React.Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            shopList:[]
+        }
     }
 
     loadShop(){
         axios.get("json/queryShopList.json")
-        .then(()=>{
-            console.info("success");
+        .then((res)=>{
+            let shopList = res.data.data.shopList;
+            this.setState({
+                shopList:shopList
+            });
         })
         .catch(()=>{
             console.error("exception");
         })
         .then(()=>{
-            console.info("complete");
         })
 
+    }
+    renderShopList(){
+        let shopList = this.state.shopList;
+      return shopList.map((item,index)=>{
+       return( <div className="item" key={index}>
+        <div className="icon">
+            <img src={item.picUrl} alt=""/>
+        </div>
+        <div className="content">
+            <div className="name">
+                {item.shopName}
+            </div>
+            <div className="shop-detail">
+                <div className="shop-data">
+                    <div className="comment-star">
+                        {this.renderStar(item.wmPoiScore /10)}
+                    </div>
+                    <div className="score">
+                        {item.wmPoiScore / 10}
+                    </div>
+                    {/* <div className="count">
+                        月售200
+                    </div> */}
+                </div>
+                <div className="shop-distance">
+                    <div className="time">
+                        {item.deliveryTimeTip}
+                    </div>
+                    <div className="distance">
+                        {item.distance}
+                    </div>
+                </div>
+            </div>
+            <div className="deliver-detail">
+                <div className="price">
+                    {item.minPriceTip}
+                </div>
+                <div className="deliver-price">
+                    {item.shippingFeeTip}
+                </div>
+                <div className="average-price">
+                    {item.averagePriceTip}
+                </div>
+            </div>
+        </div>
+    </div>
+       )
+       })
     }
     renderStar(score){
         let fullStarCount = 0;
@@ -46,248 +99,15 @@ class Shop extends React.Component{
         return starList;
     }
     componentDidMount(){
-        console.info("did mound");
         this.loadShop();
     }
     render(){
-        return(
-            <div className="shop">
-                <div className="item">
-                    <div className="icon">
-                        <img src="http://p0.meituan.net/waimaipoi/93b3baca44c5bad9f3154020c7daa69336864.jpg" alt=""/>
-                    </div>
-                    <div className="content">
-                        <div className="name">
-                            十里鲜花
-                        </div>
-                        <div className="shop-detail">
-                            <div className="shop-data">
-                                <div className="comment-star">
-                                    {this.renderStar(4)}
-                                </div>
-                                <div className="score">
-                                    3.6
-                                </div>
-                                <div className="count">
-                                    月售200
-                                </div>
-                            </div>
-                            <div className="shop-distance">
-                                <div className="time">
-                                    50分钟
-                                </div>
-                                <div className="distance">
-                                    30km
-                                </div>
-                            </div>
-                        </div>
-                        <div className="deliver-detail">
-                            <div className="price">
-                                起送 ¥20
-                            </div>
-                            <div className="deliver-prize">
-                                配送 ¥30
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className="icon">
-                        <img src="http://p0.meituan.net/waimaipoi/93b3baca44c5bad9f3154020c7daa69336864.jpg" alt=""/>
-                    </div>
-                    <div className="content">
-                        <div className="name">
-                            十里鲜花
-                        </div>
-                        <div className="shop-detail">
-                            <div className="shop-data">
-                                <div className="comment-star">
-                                    {this.renderStar(4)}
-                                </div>
-                                <div className="score">
-                                    3.6
-                                </div>
-                                <div className="count">
-                                    月售200
-                                </div>
-                            </div>
-                            <div className="shop-distance">
-                                <div className="time">
-                                    50分钟
-                                </div>
-                                <div className="distance">
-                                    30km
-                                </div>
-                            </div>
-                        </div>
-                        <div className="deliver-detail">
-                            <div className="price">
-                                起送 ¥20
-                            </div>
-                            <div className="deliver-prize">
-                                配送 ¥30
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className="icon">
-                        <img src="http://p0.meituan.net/waimaipoi/93b3baca44c5bad9f3154020c7daa69336864.jpg" alt=""/>
-                    </div>
-                    <div className="content">
-                        <div className="name">
-                            十里鲜花
-                        </div>
-                        <div className="shop-detail">
-                            <div className="shop-data">
-                                <div className="comment-star">
-                                    {this.renderStar(4)}
-                                </div>
-                                <div className="score">
-                                    3.6
-                                </div>
-                                <div className="count">
-                                    月售200
-                                </div>
-                            </div>
-                            <div className="shop-distance">
-                                <div className="time">
-                                    50分钟
-                                </div>
-                                <div className="distance">
-                                    30km
-                                </div>
-                            </div>
-                        </div>
-                        <div className="deliver-detail">
-                            <div className="price">
-                                起送 ¥20
-                            </div>
-                            <div className="deliver-prize">
-                                配送 ¥30
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className="icon">
-                        <img src="http://p0.meituan.net/waimaipoi/93b3baca44c5bad9f3154020c7daa69336864.jpg" alt=""/>
-                    </div>
-                    <div className="content">
-                        <div className="name">
-                            十里鲜花
-                        </div>
-                        <div className="shop-detail">
-                            <div className="shop-data">
-                                <div className="comment-star">
-                                    {this.renderStar(4)}
-                                </div>
-                                <div className="score">
-                                    3.6
-                                </div>
-                                <div className="count">
-                                    月售200
-                                </div>
-                            </div>
-                            <div className="shop-distance">
-                                <div className="time">
-                                    50分钟
-                                </div>
-                                <div className="distance">
-                                    30km
-                                </div>
-                            </div>
-                        </div>
-                        <div className="deliver-detail">
-                            <div className="price">
-                                起送 ¥20
-                            </div>
-                            <div className="deliver-prize">
-                                配送 ¥30
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className="icon">
-                        <img src="http://p0.meituan.net/waimaipoi/93b3baca44c5bad9f3154020c7daa69336864.jpg" alt=""/>
-                    </div>
-                    <div className="content">
-                        <div className="name">
-                            十里鲜花
-                        </div>
-                        <div className="shop-detail">
-                            <div className="shop-data">
-                                <div className="comment-star">
-                                    {this.renderStar(4)}
-                                </div>
-                                <div className="score">
-                                    3.6
-                                </div>
-                                <div className="count">
-                                    月售200
-                                </div>
-                            </div>
-                            <div className="shop-distance">
-                                <div className="time">
-                                    50分钟
-                                </div>
-                                <div className="distance">
-                                    30km
-                                </div>
-                            </div>
-                        </div>
-                        <div className="deliver-detail">
-                            <div className="price">
-                                起送 ¥20
-                            </div>
-                            <div className="deliver-prize">
-                                配送 ¥30
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="item">
-                    <div className="icon">
-                        <img src="http://p0.meituan.net/waimaipoi/93b3baca44c5bad9f3154020c7daa69336864.jpg" alt=""/>
-                    </div>
-                    <div className="content">
-                        <div className="name">
-                            十里鲜花
-                        </div>
-                        <div className="shop-detail">
-                            <div className="shop-data">
-                                <div className="comment-star">
-                                    {this.renderStar(4)}
-                                </div>
-                                <div className="score">
-                                    3.6
-                                </div>
-                                <div className="count">
-                                    月售200
-                                </div>
-                            </div>
-                            <div className="shop-distance">
-                                <div className="time">
-                                    50分钟
-                                </div>
-                                <div className="distance">
-                                    30km
-                                </div>
-                            </div>
-                        </div>
-                        <div className="deliver-detail">
-                            <div className="price">
-                                起送 ¥20
-                            </div>
-                            <div className="deliver-prize">
-                                配送 ¥30
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
+       return (
+        <div className="shop">
+           {this.renderShopList()}
+        </div>
+       ) 
+      
     }
 }
 

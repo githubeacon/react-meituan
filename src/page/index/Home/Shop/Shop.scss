@@ -87,6 +87,18 @@
                         background-color:#000;
                     }
                 }
+                .deliver-price{
+                    display: flex;
+                    align-items: center;
+                    &:after{
+                        display: inline-block;
+                        content:'';
+                        width:1px;
+                        height: px2rem(5);
+                        margin:0 px2rem(5);
+                        background-color: #000;
+                    }
+                }
             }
         }
     }

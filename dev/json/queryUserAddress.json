@@ -1,0 +1,43 @@
+{
+	"data": {
+		"currentNum": 5,
+		"list": [{
+			"addressId": 1950000001,
+			"name": "beacon",
+			"gender": 1,
+			"phone": "手机号",
+			"poi": "百世快递1",
+			"address": "百世快递2",
+			"lat": 2.3127155E7,
+			"lng": 1.13382828E8,
+			"isOutOfRange": 0,
+			"houseNumber": "百世快递3",
+			"isDefault": 0,
+			"bindType": 11,
+			"addressType": 0,
+			"isCheckOffDefaultAddr": 0,
+			"over_shipping_txt": ""
+		}, {
+			"addressId": 7858130,
+			"name": "beacon",
+			"gender": 1,
+			"phone": "15914344627",
+			"poi": "poi",
+			"address": "8区201",
+			"lat": 2.3107272E7,
+			"lng": 1.12495301E8,
+			"isOutOfRange": 0,
+			"houseNumber": "8区201",
+			"isDefault": 0,
+			"bindType": 15,
+			"addressType": 0,
+			"isCheckOffDefaultAddr": 0,
+			"over_shipping_txt": ""
+		}],
+		"bindPhone": "18998584647",
+		"needHideEditButton": false,
+		"tips": ""
+	},
+	"code": 0,
+	"msg": "成功"
+}

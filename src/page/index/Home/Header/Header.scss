@@ -13,6 +13,10 @@
             line-height: px2rem(30);
             align-items: center;
             display:flex;
+            transition: .5s;
+            &.hide{
+                max-width: 0;
+            }
             .address-name{
                 font-size: px2rem(16);
                 color: #ececed;
