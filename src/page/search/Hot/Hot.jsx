@@ -5,7 +5,7 @@ class Hot extends React.Component{
 
     render(){
         return (
-            <div className="hot">
+            <div className="hot clearfix">
                 <div className="name">热门搜索</div>
                 <div className="line"></div>
                 <ul className="hot-search-list">

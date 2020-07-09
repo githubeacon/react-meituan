@@ -51,12 +51,16 @@ class Header extends React.Component{
             )
        
     }
+    goSearchPage(){
+        window.location.href = "search.html";
+        return false;
+    }
     render(){
         return (
             <div className="header">
                     {this.renderAddress()}
                     <div className="search">
-                        <input type="text" className="one-line"  placeholder="请输入商家或者商品名称" />
+                        <div  className="placeholder one-line" onClick={this.goSearchPage} >请输入商家或者商品名称</div>
                     </div>
             </div>
         );

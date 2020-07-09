@@ -5,15 +5,14 @@
         display: flex;
         align-items: center;
         width:85%;
-        height:30px;
+        height:40px;
         background-color: #e8e8e8;
         padding: 0 10px;
         border-radius:20px;
         .search-input{
             width: 100%;
             background-color: #e8e8e8;;
-            font-size: 14px;
-            
+            font-size: 16px;
         }
         &:before{
             content: '';
@@ -41,9 +40,11 @@
         align-items: center;
         justify-content: center;
         .search-btn{
-            font-size:14px;
-            color: #feba38;
+            font-size:16px;
             text-align:center;
+            border:none;
+            color: gray;
+            background: none;
         }
     }
 }

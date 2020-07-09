@@ -37,6 +37,9 @@ class SearchBar extends React.Component{
             searchValue:e.target.value
         });
     }
+    search(){
+
+    }
     render(){
         return (
             <div className="search-bar">
@@ -45,7 +48,7 @@ class SearchBar extends React.Component{
                     {this.renderClose()}
                </div>
                <div className="right">
-                    <button className="search-btn">
+                    <button className="search-btn" onClick={this.search}>
                         搜索
                     </button>
                </div>
