@@ -1,0 +1,100 @@
+.order-page{
+    background:gray;
+    margin-bottom:50px;
+    font-weight: bolder;
+    .list{
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        margin-bottom:20px;
+        .item{
+            display: flex;
+            flex-direction: column;
+            border-top:1px solid gray;
+            border-bottom:1px solid gray;
+            padding:10px;
+            padding-bottom:0;
+            .shop-info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .shop{
+                    display: flex;
+                    align-items: center;
+                    .icon{
+                        border-radius: 50%;
+                        width:40px;
+                        height:40px;
+                        margin-right:10px;
+                    }
+                    .name{
+                        font-size: 16px;
+                    }
+                }
+                .arrow{
+                    margin-right:10px;
+                    width:10px;
+                    height:10px;
+                    border-top:1px solid #000;
+                    border-right:1px solid #000;
+                    transform: rotate(45deg);
+                }
+            }
+            .order-info{
+                margin-top:15px;
+                .product-list{
+                    display: flex;
+                    flex-direction: column;
+                    .product{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom:5px;
+                        .name{
+
+                        }
+                        .mount{
+
+                        }
+                    }
+                }
+                .order-footer{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom:10px;
+                    .order-time{
+                        color: gray;
+                        font-size:12px;
+                    }
+                    .price{
+
+                    }
+                }
+
+            }
+            .footer{
+                display: flex;
+                padding:10px 0;
+                border-top: 1px solid gray;
+                justify-content: space-between;
+                align-items: center;
+                font-size:14px;
+                .status{
+                    color: gray;
+                }
+                .buttons{
+                    display: flex;
+                    .delete{
+                        padding:6px;
+                        border:1px solid gray;
+                        margin-right:10px;
+                    }
+                    .again{
+                        background-color: gold;
+                        padding:6px;
+                        border:1px solid gray;
+                    }
+                }
+            }
+        }
+    }
+}
