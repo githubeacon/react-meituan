@@ -20,10 +20,21 @@ class History extends React.Component{
         return <li className="item" key={index}>{item}</li>
         });
     }
+
+    clearHistory(){
+        this.setState({
+            historyList:[]
+        })
+    }
     renderHistory(){
         return (
             <div className="history clearfix">
-                <div className="name">历史搜索</div>
+                <div className="head">
+                    <div className="name">历史搜索</div>
+                    <div className="trash" onClick={()=>{
+                        this.clearHistory();
+                    }}></div>
+                </div>
                 <div className="line"></div>
                 <ul className="history-search-list">
                 {this.renderHistoryList()}

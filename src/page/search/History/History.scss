@@ -1,11 +1,20 @@
 .history{
     margin:20px 10px;
    
-
-    .name{
-
-        color: #ccc;
+    .head{
+        display: flex;
+        justify-content: space-between;
+        .name{
+            color: #ccc;
+        }
+        .trash{
+            width:16px;
+            height:16px;
+            background: url(./images/trash.png);
+            background-size: 16px 16px;
+        }
     }
+    
     .line{
         width:100%;
         height:1px;
