@@ -1,3 +1,6 @@
+html{
+    background-color: rgb(240, 240, 240);
+}
 .my-page{
     background-color: rgb(240, 240, 240);
     .head{
@@ -17,20 +20,79 @@
             }
     }
     .list{
+        background-color: #fff;
         .item{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            margin:0 10px;
+            padding:8px 0;
+            border-bottom:1px solid #b0b0b0;
             .name{
+                display:flex;
+                align-items: center;
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    width:px2rem(16);
+                    height:px2rem(16);
+                    margin-right:px2rem(5);
+                }
 
+                &.package:before{
+                        background: url(./images/package.png) no-repeat ;
+                        background-size: cover;
+                }
+                &.address:before{
+                    background: url(./images/address.png) no-repeat ;
+                    background-size: cover;
+                  }
+                  &.deal:before{
+                    background: url(./images/deal.png) no-repeat ;
+                    background-size: cover;
+                  }
+                  &.question:before{
+                    background: url(./images/question.png) no-repeat ;
+                    background-size: cover;
+                  }
+                  &.logout:before{
+                    background: url(./images/loginout.png) no-repeat ;
+                    background-size: cover;
+                  }
+                  &.comment:before{
+                    background: url(./images/comment.png) no-repeat ;
+                    background-size: cover;
+                  }
+                  &.feedback:before{
+                    background: url(./images/feedback.png) no-repeat ;
+                    background-size:cover;
+                  }
+            }
+            &:last-child{
+                border-bottom: none;
             }
             .arrow{
-
+                width:px2rem(8);
+                height:px2rem(8);
+                border-top:2px solid #b0b0b0;
+                border-right:2px solid #b0b0b0;
+                transform: rotate(45deg);
+                margin-right:10px;
             }
         }
     }
-    .custermer{
+    .customer{
+        margin:12px 0;
+        text-align: center;
+        padding:10px 0;
+        color:#ffc157;
+        background-color: #fff;
 
     }
 
     .service{
-
+        text-align: center;
+        color: #afafaf;
+        font-size:12px;
     }
 }

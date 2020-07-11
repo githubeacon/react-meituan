@@ -7,7 +7,30 @@ class My extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: ""
+            userName: "",
+            listMap: {
+                package: {
+                    name: "美团红包"
+                },
+                address: {
+                    name: "收货地址"
+                },
+                comment: {
+                    name: "我的评价"
+                },
+                deal:{
+                    name:"我的订单"
+                },
+                feedback: {
+                    name: "意见反馈"
+                },
+                question: {
+                    name: "常见问题"
+                },
+                logout:{
+                    name:"退出登录"
+                }
+            }
         };
     }
 
@@ -25,6 +48,24 @@ class My extends React.Component {
     renderUserName() {
         return this.state.userName;
     }
+
+    renderListMap() {
+        const listMap = this.state.listMap;
+        const keys = Object.keys(listMap);
+        return keys.map((key, index) => {
+            let obj = listMap[key];
+            let cls = "name " + key;
+            let name = obj.name;
+            return (
+                <li className="item" key={index}>
+                    <div className={cls}>
+                        {name}
+                    </div>
+                    <div className="arrow"></div>
+                </li>
+            )
+        })
+    }
     render() {
         return (
             <div className="my-page">
@@ -33,24 +74,14 @@ class My extends React.Component {
                     <p className="name">{this.renderUserName()}</p>
                 </div>
                 <ul className="list">
-                    <li className="item">
-                        <div className="name">
-                            美团红包
-                        </div>
-                        <div className="arrow"></div>
-                    </li>
-                    <li className="item">
-                        <div className="name">
-                            收货地址
-                        </div>
-                        <div className="arrow"></div>
-                    </li>
-                </ul>
-                <div className="custemer">
+                    {this.renderListMap()}
 
+                </ul>
+                <div className="customer">
+                    客服电话：123456
                 </div>
                 <div className="service">
-
+                    服务时间：9:00 - 24：00
                 </div>
             </div>
         )
