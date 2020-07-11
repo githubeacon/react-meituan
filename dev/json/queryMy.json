@@ -1,0 +1,15 @@
+{
+	"data": {
+		"userName": "Juw546594923",
+		"face": "",
+		"couponCount": 0,
+		"poiCouponNum": 0,
+		"message": "",
+		"type": 1,
+		"subtyp": 0,
+		"close": "",
+		"inviteEnvelopeSwitch": true
+	},
+	"code": 0,
+	"msg": "成功"
+}

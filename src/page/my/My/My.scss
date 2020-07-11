@@ -1,0 +1,36 @@
+.my-page{
+    background-color: rgb(240, 240, 240);
+    .head{
+        background: url(./images/back.png);
+         height:150px;
+         padding:30px 0 ;
+            .icon{
+                display: block;
+                width:60px;
+                height:60px;
+                margin:auto;
+            }
+            .name{
+                text-align: center;
+                font-size:16px;
+                margin-top:10px;
+            }
+    }
+    .list{
+        .item{
+            .name{
+
+            }
+            .arrow{
+
+            }
+        }
+    }
+    .custermer{
+
+    }
+
+    .service{
+
+    }
+}
